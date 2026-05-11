@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["node", "mocha", "chai"],
+    "outDir": "dist"
+  },
+  "include": [
+    "hardhat.config.ts",
+    "test/Artifacts.test.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "artifacts",
+    "cache"
+  ]
+}

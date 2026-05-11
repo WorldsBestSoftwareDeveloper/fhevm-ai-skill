@@ -1,0 +1,32 @@
+{
+  "name": "fhevm-agent-skill",
+  "version": "1.0.0",
+  "description": "FHEVM Agent Safety and Development Skill",
+  "scripts": {
+    "compile": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat compile",
+    "test": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat test test/Artifacts.test.ts",
+    "test:counter": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat test test/Artifacts.test.ts --grep ConfidentialCounter",
+    "test:token": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat test test/Artifacts.test.ts --grep ConfidentialERC7984Token",
+    "test:auction": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat test test/Artifacts.test.ts --grep BlindAuction",
+    "test:gas": "set REPORT_GAS=true&& npm run test",
+    "demo": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat run demo/demo.ts --network hardhat",
+    "clean": "set APPDATA=.hardhat-appdata&& set LOCALAPPDATA=.hardhat-localappdata&& hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.0",
+    "dotenv": "^16.0.0",
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@fhevm/solidity": "^0.10.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "fhevm-contracts": "^0.2.4"
+  }
+}
